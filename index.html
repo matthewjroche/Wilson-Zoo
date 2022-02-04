@@ -1,0 +1,133 @@
+<!--
+
+    Home Page
+
+· This should advertise the zoo and draw people into the application
+
+· Content suggestions:
+
+· Welcome to the zoo
+
+· Information about the zoo's values
+
+· Information about what you can do at the zoo / Latest news about the zoo
+
+· The animal of the week with a link to the animal page to see more animals
+
+· The event of the week with a link to the event section of the Bookings / Donate page
+
+· Call to action for donating to the zoo, linked to the donate section of the Bookings/Donate page
+
+· Call to action for booking tickets, linked to the Book a Visit section of the Bookings/Donate page
+
+
+-->
+
+<!DOCTYPE html>
+<html lang="en" > 
+ 
+
+
+<head> <!-- the head is used to contain metadata about the page, for example the "Tab" title, favicon, character set used, etc. -->
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="WilsonZooLogo512.png">
+  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="description" content="Wilson Zoo">
+  <meta name="viewport" content="width=device-width">
+  <meta name="theme-color" content="#aef7b4">
+  <title>Wilson Zoo - Fun For All The Family</title>
+  <link rel="icon" href="WilsonZooLogo.svg">
+</head>
+
+
+<body> <!--The body contains 4 grid items inside a grid container-->
+
+<div class="header"><!--This header is what you see at the top of the screen, a Wilson Zoo logo on the left and then navigational buttons on the right (or rows if mobile)-->
+  <a href="index.html">
+  <img src="WilsonZooLogo.svg" width="50" height="50" alt="Wilson Zoo Logo" ></a>
+  <div class="header-right">
+    <a class="active" href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="animals.html">The Animals</a>
+    <a href="kids.html">Kids Page</a>
+  </div>
+</div>
+
+
+  <div class="grid-container">
+    <div class="grid-item">
+      <p>Welcome to Wilson Zoo! We have:
+        <ol>
+          <li>Giraffes</li>
+          <li>Tigers</li>
+          <li>Monkeys</li>
+          <li>Bears</li>
+        </ol>
+        And <b><em>many</em></b> more!
+      
+    </div>
+
+    <a href="animals.html">
+      <div class="grid-item" >
+          <p> <b>Animal of the Week!</b></p>
+            
+            <img src="Zoo/gir.webp" width="200" height="300" alt="Image of a Giraffe" >
+      </div>
+    </a>
+
+    <div class="grid-item">
+      <p>Here at Wilson Zoo we want to provide a family friendly environment for fun and exploration! Come and visit our zoo and see the exotic animals!</p>
+    </div>  
+
+    <div class="grid-item">
+      <p>Wilson Zoo is committed to the conservation of exotic animals worldwide.</p>
+    </div>  
+  </div>
+
+  <div class="footer"> <!--This is a sticky footer, which will always appear at the bottom of the page-->
+    <p>Matthew Roche R014882K</p>
+    <p>Images used for educational purposes thanks to Z70  Photography</p>
+    <a href="bookings.html">Bookings</a>
+    <a href="prototype.html">Prototype</a>
+    <a href="#top">Top of page</a>
+    <p></p>
+  </div>
+
+
+  <script>
+
+    //check whether browser support service workers
+    
+    if ('serviceWorker' in navigator) {
+    
+    window.addEventListener('load', function() {
+    
+    navigator.serviceWorker.register('serviceworker.js').then(
+    
+    function(registration) {
+    
+    console.log('Service worker registration successful',registration);
+    
+    },
+    
+    function(err) {
+    
+    console.log('Service worker registration failed', err);
+    
+    });
+    
+    });
+    
+    }
+    
+  </script>
+
+
+
+</body>
+
+
+
+
+</html>

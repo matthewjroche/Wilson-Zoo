@@ -1,0 +1,146 @@
+/*The comments are the same, except for the new animation CSS*/
+body {
+  background-color: #bbf730;
+  margin:0;
+  min-height: 400px;
+  margin-bottom: 100px;
+  clear: both;
+  padding:0;
+  max-width: 100%;
+  min-width: 30%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+  
+.header {
+  overflow: hidden; 
+  background-color: #aef7b4;
+  padding: 20px 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  height:auto;
+}
+  
+.header a {
+  float: left;
+  color: black;
+  text-align: center; 
+  padding: 12px;
+  text-decoration: none; 
+  font-size: 18px;
+  line-height: 25px; 
+  border-radius: 4px; 
+  vertical-align:middle;
+  top:50%;
+}
+  
+.header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+  
+.header a:hover {
+  background-color: #ddd;
+  color: black;
+}
+  
+.header a.active {
+  background-color: dodgerblue;
+  color: rgb(0, 0, 0);
+  vertical-align:middle;
+}
+  
+.header-right {
+  float: right;
+  vertical-align:middle;
+  padding:auto;
+  top:50%;
+}
+  
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .header-right {
+    float: none;
+    vertical-align:middle;
+  }
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #aef7b4;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  margin-top:-80px;
+}
+
+.flex-container {
+  justify-content: center;
+  flex-flow:column wrap;
+  flex-direction: column;
+
+
+  animation: fadein 2s; /*Here I have added some animation to the flex container, so that when the page is opened, an animation is performed (fade in). It is necessary to use different keyframes for different browers for compatibility.*/
+  -moz-animation: fadein 2s; /* Firefox */
+  -webkit-animation: fadein 2s; /* Safari and Chrome */
+  -o-animation: fadein 2s; /* Opera */
+}
+
+.flex-container > div{
+  margin: 10px;
+  padding: 20px;
+  text-align: center;
+  font-size: 30px;
+  background-color: #f1f1f1;
+}
+
+.flex-container>div:hover{ /*This changes the colour of the text to pink when it has been hovered over*/
+  color: rgb(255, 160, 160);
+}
+
+
+@keyframes fadein { /*This changes the opacity from 0 (invisible) to 1 (visible) */
+  from {
+      opacity:0;
+  }
+  to {
+      opacity:1;
+  }
+}
+
+@-moz-keyframes fadein { /* Firefox */
+  from {
+      opacity:0;
+  }
+  to {
+      opacity:1;
+  }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+  from {
+      opacity:0;
+  }
+  to {
+      opacity:1;
+  }
+}
+@-o-keyframes fadein { /* Opera */
+  from {
+      opacity:0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+
+
+
+
+
+
+
+

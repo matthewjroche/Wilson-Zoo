@@ -1,0 +1,118 @@
+body { /*The body is set to a green background, 0 margin, min and max width, font families sans serif etc. */
+  background-color: #bbf730;
+  margin:0;
+  min-height: 400px;
+  margin-bottom: 100px;
+  clear: both;
+  padding:0px;
+  max-width: 100%;
+  min-width: 30%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  overflow: auto;
+}
+
+.header { /*This creates a header layout, it does not include the logo or buttons.*/
+  overflow: hidden; 
+  background-color: #aef7b4;
+  padding: 20px 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  height:auto;
+}
+  
+.header a {   /* This is for the buttons on the header (Home, About Us, The Animals, Kids Page) */
+  float: left;
+  color: black;
+  text-align: center; 
+  padding: 12px;
+  text-decoration: none; 
+  font-size: 18px;
+  line-height: 25px; 
+  border-radius: 4px; 
+  vertical-align:middle;
+  top:50%;
+}
+  
+.header a.logo {   /* This sets the size of the Wilson Zoo logo */
+  font-size: 25px;
+  font-weight: bold;
+}
+  
+.header a:hover {   /* When the user hovers over the buttons, the background will change to white and the text to black */
+  background-color: #ddd;
+  color: black;
+}
+  
+.header a.active {   /* When you are on the current page, the button will be highlighted in blue to indicate this.*/
+  background-color: dodgerblue;
+  color: rgb(0, 0, 0);
+  vertical-align:middle;
+}
+  
+.header-right {   /* This sets the buttons to the right of the header */
+  float: right;
+  vertical-align:middle;
+  padding:auto;
+  top:50%;
+}
+  
+@media screen and (max-width: 500px) {   /* The buttons are set to appear as rows if the width of the screen is less than 500px */
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .header-right {
+    float: none;
+    vertical-align:middle;
+  }
+}
+
+
+
+.footer { /*The footer is set to a fixed sticky position at the bottom of the screen*/
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #aef7b4;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  margin-top:-80px;
+}
+
+.flex-container { /*Here is where is flex boxes are contained */
+  justify-content: center;
+  flex-flow:column wrap;
+  flex-direction: column;
+}
+
+.flex-container > div{ /*This is for div tags which are inside a flex container*/
+  margin: 10px;
+  padding: 20px;
+  text-align: center;
+  font-size: 30px;
+  background-color: #f1f1f1;
+  padding-bottom: 50px;
+}
+
+.grid-container { /*This is for the horrible grid display on */
+  display: grid;
+  gap: 50px;
+  padding: 10px;
+  height: 50vh;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /*this line of code acts rather similarly to a media query*/
+  min-height: 200px;
+  margin-bottom: 10px;
+  clear: both;
+  padding:0;
+}
+
+.grid-item { /*This is to organise the contents of the grid container*/ 
+  background-color: rgba(203, 247, 123, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+  padding-bottom: 100px;
+  max-width: 100%;
+}
+

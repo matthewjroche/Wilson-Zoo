@@ -1,0 +1,112 @@
+<!--
+
+3. The Animals
+
+· This provides information about the animals you can see at the zoo
+
+· Content suggestions:
+
+· The featured animal of the week, with a link to learn more (linked to the holding page)
+
+· Examples of other animals you can see at the zoo
+
+-->
+<!DOCTYPE html>
+
+<html lang="en" > 
+
+<head><!-- the head is used to contain metadata about the page, for example the "Tab" title, favicon, character set used, etc. -->
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="WilsonZooLogo512.png">
+  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="description" content="Wilson Zoo">
+  <meta name="viewport" content="width=device-width">
+  <meta name="theme-color" content="#aef7b4">
+  <title>Wilson Zoo - About Us</title>
+  <link rel="icon" href="WilsonZooLogo.svg" >
+</head>
+
+
+
+
+
+
+<body> <!--The body contains a flex box inside a flex container-->
+  
+  <div class="header"><!--This header is what you see at the top of the screen, a Wilson Zoo logo on the left and then navigational buttons on the right (or rows if mobile)-->
+    <a href="index.html">
+      <img src="WilsonZooLogo.svg" width="50" height="50" alt="Wilson Zoo Logo"></a>
+      <div class="header-right">
+        <a  href="index.html">Home</a>
+        <a  href="about.html">About Us</a>
+        <a class="active" href="animals.html">The Animals</a>
+        <a href="kids.html">Kids Page</a>
+      </div>
+  </div>
+
+  <div class="flex-container">
+    <div>
+      <picture> <!--For this image, there are three images which will change depending on the width of the page. The full size image .jpg is displayed if width is big enough, if not, smaller webp resizes are used. -->
+        <source media="(min-width:800px)" srcset="Zoo/camel.jpg">
+       <source media="(min-width:650px)" srcset="Zoo/600px.webp" >
+       <source media="(min-width:400px)" srcset="Zoo/400px.webp" >
+       <img src="Zoo/600px.webp"   alt="Image of a camel" style="width:100%;"  >
+     </picture>
+
+     <p><b>Camel Facts!</b></p>
+     <p>
+       <ul>
+          <li>Camels have three sets of eyelids!</li>
+          <li>Camels can shut their nostrils during sandstorms!</li>
+          <li>A camel's humps allows them to store up to 80lbs of fat!</li>
+       </ul>
+     
+    </div>
+  </div>
+
+  <div class="footer"><!--This is a sticky footer, which will always appear at the bottom of the page-->
+    <p>Matthew Roche R014882K
+      <p>Images used for educational purposes thanks to Z70  Photography</p>
+    
+    <a href="bookings.html">Bookings</a>
+    <a href="prototype.html">Prototype</a>
+    <a href="#top">Top of page</a>
+    <p></p>
+  </div>
+
+  <script>
+
+    //check whether browser support service workers
+    
+    if ('serviceWorker' in navigator) {
+    
+    window.addEventListener('load', function() {
+    
+    navigator.serviceWorker.register('serviceworker.js').then(
+    
+    function(registration) {
+    
+    console.log('Service worker registration successful',registration);
+    
+    },
+    
+    function(err) {
+    
+    console.log('Service worker registration failed', err);
+    
+    });
+    
+    });
+    
+    }
+    
+  </script>
+
+
+</body>
+
+
+
+
+</html>

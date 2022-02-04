@@ -1,0 +1,115 @@
+<!--
+
+5. Bookings / Donations
+
+· This provides information on 3 things, each of which should have an anchor to link to directly:
+
+· Book a Visit - A table of prices and how to book, including group discounts
+
+· Donations – Information on donations to help the running of the zoo, conservation and sponsoring an animal
+
+· Events – Information on the events at the zoo and details of how to book
+    
+-->
+
+
+
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+<head><!-- the head is used to contain metadata about the page, for example the "Tab" title, favicon, character set used, etc. -->
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="WilsonZooLogo512.png">
+  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="description" content="Wilson Zoo">
+  <meta name="viewport" content="width=device-width">
+  <meta name="theme-color" content="#aef7b4">
+  <title>Wilson Zoo - About Us</title>
+  <link rel="icon" href="WilsonZooLogo.svg" >
+</head>
+
+
+
+
+
+
+<body><!--The body contains three flex boxes wrapped inside a flex container-->
+  
+  <div class="header"><!--This header is what you see at the top of the screen, a Wilson Zoo logo on the left and then navigational buttons on the right (or rows if mobile)-->
+    <a href="index.html">
+      <img src="WilsonZooLogo.svg" width="50" height="50" alt="Wilson Zoo Logo"></a>
+      <div class="header-right">
+        <a  href="index.html">Home</a>
+        <a  href="about.html">About Us</a>
+        <a href="animals.html">The Animals</a>
+        <a href="kids.html">Kids Page</a>
+      </div>
+  </div>
+  
+  <div class="flex-container">
+    <div>Pricing<p></p>
+      <table style="width:100%">
+        <tr><th>Ticket</th><th>Pay on the Day</th> <th>Pre-Book</th></tr>
+        <tr><td>Adult</td><td>£9</td><td>£6</td></tr>
+        <tr><td>Child (3 to 14)</td><td>£6</td><td>£5</td></tr>
+        <tr><td>Family (2 adults 2 children)</td><td>£18</td><td>£16</td></tr>
+        <tr><td>Disabled</td><td>£2</td><td>£2</td></tr>
+        <tr><td>Carer</td><td>Free</td><td>Free</td></tr>
+        <tr><td>Under 3 years old</td><td>Free</td><td>Free</td></tr>
+      </table>
+    </div>
+
+    <div>Make a booking<p></p>
+      To pre-book a ticket please call our landline number 0178280085
+    </div>
+
+    <div>Donations<p></p>
+      Wilson Zoo is a registered charity. You can make a Gift-Aid donation, which will provide an extra 25p for every £1 you donate.<p></p>
+    </div>
+  </div>
+
+
+  <div class="footer"><!--This is a sticky footer, which will always appear at the bottom of the page-->
+    <p>Matthew Roche R014882K</p>
+    <a href="bookings.html">Bookings</a>
+    <a href="prototype.html">Prototype</a>
+    <a href="#top">Top of page</a>
+    <p></p>
+  </div>
+
+  <script>
+
+    //check whether browser support service workers
+    
+    if ('serviceWorker' in navigator) {
+    
+    window.addEventListener('load', function() {
+    
+    navigator.serviceWorker.register('serviceworker.js').then(
+    
+    function(registration) {
+    
+    console.log('Service worker registration successful',registration);
+    
+    },
+    
+    function(err) {
+    
+    console.log('Service worker registration failed', err);
+    
+    });
+    
+    });
+    
+    }
+    
+  </script>
+
+</body>
+
+
+
+
+</html>

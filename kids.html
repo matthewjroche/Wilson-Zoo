@@ -1,0 +1,125 @@
+<!--
+
+4. Kids Page
+
+· This should be styled for and aimed at primary school children
+
+· Content requirements:
+
+· suitable animation
+
+· EITHER animals that are close to extinction and how they can help
+
+· OR how they can help animals in their garden by making things for them
+
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en" > 
+
+
+<head><!-- the head is used to contain metadata about the page, for example the "Tab" title, favicon, character set used, etc. -->
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="WilsonZooLogo512.png">
+  <link rel="stylesheet" href="kidsstyles.css">
+  <meta charset="UTF-8">
+  <meta name="description" content="Wilson Zoo">
+  <meta name="viewport" content="width=device-width">
+  <meta name="theme-color" content="#aef7b4">
+  <title>Wilson Zoo - Kids Page</title>
+
+  <link rel="icon" href="WilsonZooLogo.svg" >
+</head>
+
+
+
+
+
+
+<body> <!--The body contains two flex boxes inside a flex container, with a fade in and hover animation-->
+
+  <div class="header"><!--This header is what you see at the top of the screen, a Wilson Zoo logo on the left and then navigational buttons on the right (or rows if mobile)-->
+    <a href="index.html">
+     <img src="WilsonZooLogo.svg" width="50" height="50" alt="Wilson Zoo Logo" ></a>
+     <div class="header-right">
+       <a  href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+       <a href="animals.html">The Animals</a>
+       <a class="active" href="kids.html">Kids Page</a>
+    </div>
+  </div>
+
+  <div class=flexfadein> 
+    <p>
+
+      <div class="flex-container">
+       <div>Animals close to extinction!
+           <ol>
+              <li> Vaquita (only around 6 left!)</li>
+              <li> Amur Leopard (less than 70!)</li>
+              <li> Kakapo (less than 140!)</li>
+              <li> Gharial crocodile (less than 100 to 300!)</li>
+           </ol>
+      </div>
+
+      <div>
+
+        <table style="width:100%"> 
+          <tr><th>What you can do</th>
+          <th>Difficulty</th></tr>
+         <tr><td>Learn about endangered species in your area</td>
+          <td>Easy</td></tr>
+          <tr><td>Make your home wildlife friendly</td>
+          <td>Medium</td></tr>
+          <tr><td>Recycle and buy sustainable products</td>
+          <td>Easy</td></tr>
+        </table>
+      </div>
+      </div>
+    
+  </div>
+
+  <div class="footer"><!--This is a sticky footer, which will always appear at the bottom of the page-->
+    <p>Matthew Roche R014882K</p>
+    <a href="bookings.html">Bookings</a>
+    <a href="prototype.html">Prototype</a>
+    <a href="#top">Top of page</a>
+    <p></p>
+  </div>
+
+  <script>
+
+    //check whether browser support service workers
+    
+    if ('serviceWorker' in navigator) {
+    
+    window.addEventListener('load', function() {
+    
+    navigator.serviceWorker.register('serviceworker.js').then(
+    
+    function(registration) {
+    
+    console.log('Service worker registration successful',registration);
+    
+    },
+    
+    function(err) {
+    
+    console.log('Service worker registration failed', err);
+    
+    });
+    
+    });
+    
+    }
+    
+  </script>
+
+</body>
+
+
+
+
+</html>
